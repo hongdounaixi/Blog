@@ -12,24 +12,14 @@ import org.springframework.stereotype.Service;
  * @Date: 2021/06/07/21:11
  * @Description:
  */
-@Service
-public class UserService implements UserMapper {
+public interface UserService{
 
-    @Autowired
-    private UserMapper userMapper;
+    public User login(String username,String password);
 
-    @Override
-    public User login(String username, String password) {
-        return userMapper.login(username,password);
-    }
+    public User phoneLogin(String phone);
 
-    @Override
-    public User phoneLogin(String phone) {
-        return userMapper.phoneLogin(phone);
-    }
-
-    @Override
-    public User register(User user) {
-        return userMapper.register(user);
-    }
+//    @Override
+//    public User register(User user) {
+//        return userMapper.register(user);
+//    }
 }

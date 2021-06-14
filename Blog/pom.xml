@@ -11,6 +11,7 @@
     <modules>
         <module>blog-common</module>
         <module>blog-user</module>
+        <module>blog-server</module>
     </modules>
 
     <!--父工程-->
